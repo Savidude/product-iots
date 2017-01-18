@@ -63,6 +63,9 @@
                                 <featureArtifactDef>
                                     org.wso2.carbon.devicemgt-plugins:org.wso2.carbon.device.mgt.iot.virtualfirealarm.feature:\${carbon.device.mgt.plugin.version}
                                 </featureArtifactDef>
+                                <featureArtifactDef>
+                                    org.wso2.carbon.devicemgt-plugins:org.wso2.carbon.device.mgt.iot.digitaldisplay.feature:\${carbon.device.mgt.plugin.version}
+                                </featureArtifactDef>
                             </featureArtifacts>
                         </configuration>
                     </execution>
@@ -93,6 +96,10 @@
                                 </feature>
                                 <feature>
                                     <id>org.wso2.carbon.device.mgt.iot.virtualfirealarm.feature.group</id>
+                                    <version>\${carbon.device.mgt.plugin.version}</version>
+                                </feature>
+                                <feature>
+                                    <id>org.wso2.carbon.device.mgt.iot.digitaldisplay.feature.group</id>
                                     <version>\${carbon.device.mgt.plugin.version}</version>
                                 </feature>
                             </features>
@@ -172,7 +179,7 @@
              Ideally the Axis2 build should only use Maven central (which is available
              by default) and nothing else. We had troubles with other repositories in
              the past. Therefore configuring additional repositories here should be
-             considered very carefully.-->
+             considered very carefully. -->
         <repository>
             <id>wso2-nexus</id>
             <name>WSO2 internal Repository</name>
