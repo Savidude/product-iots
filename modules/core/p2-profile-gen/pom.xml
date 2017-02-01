@@ -430,7 +430,7 @@
                                     org.wso2.carbon.devicemgt-plugins:org.wso2.carbon.appmgt.mdm.osgiconnector.feature:${carbon.device.mgt.plugin.version}
                                 </featureArtifactDef>
                                 <featureArtifactDef>
-                                    org.wso2.carbon.devicemgt-plugins:org.wso2.carbon.appmgt.mdm.restconnector.feature:${carbon.device.mgt.plugin.version}
+                                    org.wso2.carbon.devicemgt-plugins:org.wso2.carbon.appmgt.mdm.restconnector.feature:3.0.10-SNAPSHOT
                                 </featureArtifactDef>
                                 <!-- Mobile Device Management Features END -->
 
@@ -837,7 +837,7 @@
                                 </feature>
                                 <feature>
                                     <id>org.wso2.carbon.appmgt.mdm.restconnector.feature.group</id>
-                                    <version>${carbon.device.mgt.plugin.version}</version>
+                                    <version>3.0.10-SNAPSHOT</version>
                                 </feature>
                                 <!-- End of Mobile Features -->
 
@@ -1582,7 +1582,7 @@
                                 </feature>
                                 <feature>
                                     <id>org.wso2.carbon.appmgt.mdm.restconnector.feature.group</id>
-                                    <version>${carbon.device.mgt.plugin.version}</version>
+                                    <version>3.0.10-SNAPSHOT</version>
                                 </feature>
                                 <!-- End of app management features-->
                                 <feature>
@@ -1987,7 +1987,7 @@
                                 </feature>
                                 <feature>
                                     <id>org.wso2.carbon.appmgt.mdm.restconnector.feature.group</id>
-                                    <version>${carbon.device.mgt.plugin.version}</version>
+                                    <version>3.0.10-SNAPSHOT</version>
                                 </feature>
                                 <!-- End of app management features-->
                                 <feature>
@@ -2471,7 +2471,7 @@
                                 </feature>
                                 <feature>
                                     <id>org.wso2.carbon.appmgt.mdm.restconnector.feature.group</id>
-                                    <version>${carbon.device.mgt.plugin.version}</version>
+                                    <version>3.0.10-SNAPSHOT</version>
                                 </feature>
                                 <!-- End of app management features-->
 
@@ -3129,7 +3129,7 @@
                                 </feature>
                                 <feature>
                                     <id>org.wso2.carbon.appmgt.mdm.restconnector.feature.group</id>
-                                    <version>${carbon.device.mgt.plugin.version}</version>
+                                    <version>3.0.10-SNAPSHOT</version>
                                 </feature>
                                 <!-- End of app management features-->
 
