@@ -95,6 +95,23 @@ This file is ciphertool compliant. Refer PRODUCT_HOME/repository/conf/security/c
             <allowSharedTopicSubscriptions>false</allowSharedTopicSubscriptions>
             <allowStrictNameValidation>true</allowStrictNameValidation>
 
+            <security>
+                <authorizer class="org.wso2.carbon.andes.extensions.device.mgt.amqp.authorization.DeviceAccessBasedAMQPAuthorizer">
+                    <!--<property name="connectionPermission">/permission/admin/device-mgt/user</property>-->
+                    <!--topic subscription permissions which are assigned through grouping-->
+                    <property name="subscriberPermission">/permission/device-mgt/user/groups/device_events</property>
+                    <!--topic publisher permissions which are assigned through grouping-->
+                    <property name="publisherPermission">/permission/device-mgt/user/groups/device_operation</property>
+
+                    <property name="username">admin</property>
+                    <property name="password">admin</property>
+                    <property name="tokenEndpoint">https://localhost:8243</property>
+                    <!--offset time from expiry time to trigger refresh call - seconds -->
+                    <property name="tokenRefreshTimeOffset">100</property>
+                    <property name="deviceMgtServerUrl">https://localhost:8243</property>
+                </authorizer>
+            </security>
+
             <!-- Refer repository/conf/advanced/qpid-config.xml for further AMQP-specific configurations.-->
         </amqp>
         <mqtt enabled="true">
