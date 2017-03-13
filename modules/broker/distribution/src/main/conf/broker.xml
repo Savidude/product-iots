@@ -96,8 +96,18 @@ This file is ciphertool compliant. Refer PRODUCT_HOME/repository/conf/security/c
             <allowStrictNameValidation>true</allowStrictNameValidation>
 
             <security>
+                <!--<authentication>REQUIRED</authentication>-->
+                <!--<authenticator class="org.wso2.carbon.andes.authentication.andes.OAuth2BasedMQTTAuthenticator">-->
+                    <!--<property name="hostURL">https://localhost:9443/services/OAuth2TokenValidationService</property>-->
+                    <!--<property name="username">admin</property>-->
+                    <!--<property name="password">admin</property>-->
+                    <!--<property name="maxConnectionsPerHost">10</property>-->
+                    <!--<property name="maxTotalConnections">150</property>-->
+                <!--</authenticator>-->
+
+                <authorization>REQUIRED</authorization>
                 <authorizer class="org.wso2.carbon.andes.extensions.device.mgt.amqp.authorization.DeviceAccessBasedAMQPAuthorizer">
-                    <!--<property name="connectionPermission">/permission/admin/device-mgt/user</property>-->
+                    <property name="connectionPermission">/permission/admin/device-mgt/user</property>
                     <!--topic subscription permissions which are assigned through grouping-->
                     <property name="subscriberPermission">/permission/device-mgt/user/groups/device_events</property>
                     <!--topic publisher permissions which are assigned through grouping-->
