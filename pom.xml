@@ -1534,14 +1534,14 @@
         <carbon.governance.version>4.7.0</carbon.governance.version>
 
         <!-- Carbon Device Management -->
-        <carbon.device.mgt.version>2.0.20-SNAPSHOT</carbon.device.mgt.version>
+        <carbon.device.mgt.version>2.0.27-SNAPSHOT</carbon.device.mgt.version>
         <carbon.device.mgt.version.range>[2.0.0, 3.0.0)</carbon.device.mgt.version.range>
 
         <!-- IOT Device Management -->
         <product.iot.version>3.1.0-SNAPSHOT</product.iot.version>
 
         <!-- Carbon Device Management Plugins-->
-        <carbon.device.mgt.plugin.version>3.0.12-SNAPSHOT</carbon.device.mgt.plugin.version>
+        <carbon.device.mgt.plugin.version>3.0.14-SNAPSHOT</carbon.device.mgt.plugin.version>
 
         <!-- API Management -->
         <carbon.api.mgt.version>6.1.35</carbon.api.mgt.version>
@@ -1573,7 +1573,7 @@
         <!-- IoT Broker Dependencies -->
         <product.iot.broker.version>${product.iot.version}</product.iot.broker.version>
         <andes.version>3.2.1-SNAPSHOT</andes.version>
-        <carbon.messaging.version>3.2.1-SNAPSHOT</carbon.messaging.version>
+        <carbon.messaging.version>3.2.2-SNAPSHOT</carbon.messaging.version>
 
         <!-- Third Party Dependencies-->
         <spongycastle.version>1.51.0.0</spongycastle.version>
