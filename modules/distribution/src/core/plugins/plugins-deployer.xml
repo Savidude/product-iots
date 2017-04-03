@@ -64,7 +64,7 @@
                                     org.wso2.carbon.devicemgt-plugins:org.wso2.carbon.device.mgt.iot.virtualfirealarm.feature:${carbon.device.mgt.plugin.version}
                                 </featureArtifactDef>
                                 <featureArtifactDef>
-                                    org.wso2.carbon.devicemgt-plugins:org.wso2.carbon.device.mgt.iot.digitaldisplay.feature:\${carbon.device.mgt.plugin.version}
+                                    org.wso2.carbon.devicemgt-plugins:org.wso2.carbon.device.mgt.iot.digitaldisplay.feature:${carbon.device.mgt.plugin.version}
                                 </featureArtifactDef>
                             </featureArtifacts>
                         </configuration>
@@ -100,7 +100,7 @@
                                 </feature>
                                 <feature>
                                     <id>org.wso2.carbon.device.mgt.iot.digitaldisplay.feature.group</id>
-                                    <version>\${carbon.device.mgt.plugin.version}</version>
+                                    <version>${carbon.device.mgt.plugin.version}</version>
                                 </feature>
                             </features>
                         </configuration>
@@ -214,6 +214,6 @@
         </repository>
     </repositories>
     <properties>
-        <carbon.device.mgt.plugin.version>3.0.17</carbon.device.mgt.plugin.version>
+        <carbon.device.mgt.plugin.version>3.0.22-SNAPSHOT</carbon.device.mgt.plugin.version>
     </properties>
 </project>
