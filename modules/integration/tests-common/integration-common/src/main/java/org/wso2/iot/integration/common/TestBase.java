@@ -17,8 +17,11 @@
  */
 package org.wso2.iot.integration.common;
 
+import org.apache.commons.net.util.Base64;
+import org.testng.annotations.DataProvider;
 import org.wso2.carbon.automation.engine.context.AutomationContext;
 import org.wso2.carbon.automation.engine.context.TestUserMode;
+import org.wso2.carbon.automation.engine.context.beans.User;
 import org.wso2.carbon.automation.engine.frameworkutils.FrameworkPathUtil;
 import org.wso2.carbon.integration.common.utils.LoginLogoutClient;
 
@@ -31,13 +34,23 @@ public class TestBase {
     protected AutomationContext automationContext;
     protected String backendHTTPSURL;
     protected String backendHTTPURL;
+    protected String accessTokenString;
+    protected TestUserMode userMode;
 
     protected void init(TestUserMode userMode) throws Exception {
         automationContext = new AutomationContext(Constants.AUTOMATION_CONTEXT, userMode);
-        backendHTTPSURL = automationContext.getContextUrls().getWebAppURLHttps().replace("9443", String.valueOf(Constants
-                .HTTPS_GATEWAY_PORT));
+        String tenantDomain = automationContext.getContextTenant().getDomain();
+                backendHTTPSURL = automationContext.getContextUrls().getWebAppURLHttps().replace("9443", String.valueOf(Constants
+                .HTTPS_GATEWAY_PORT)).replace("/t/" + tenantDomain , "");
         backendHTTPURL = automationContext.getContextUrls().getWebAppURL().replace("9763", String.valueOf(Constants
-                .HTTP_GATEWAY_PORT));
+                .HTTP_GATEWAY_PORT)).replace("/t/" + tenantDomain , "");
+        User currentUser = getAutomationContext().getContextTenant().getContextUser();
+        byte[] bytesEncoded = Base64
+                .encodeBase64((currentUser.getUserName() + ":" + currentUser.getPassword()).getBytes());
+        String encoded = new String(bytesEncoded);
+        accessTokenString = "Bearer " + OAuthUtil
+                .getOAuthTokenPair(encoded, backendHTTPSURL, backendHTTPSURL, currentUser.getUserName(),
+                        currentUser.getPassword());
     }
 
     protected void initPublisher(String productGroupName, String instanceName,
@@ -68,7 +81,19 @@ public class TestBase {
         return automationContext.getContextUrls().getServiceUrl();
     }
 
+    protected AutomationContext getAutomationContext() {
+        return automationContext;
+    }
+
     protected String getTestArtifactLocation() {
         return FrameworkPathUtil.getSystemResourceLocation();
+    }
+
+    @DataProvider
+    public static Object[][] userModeProvider() {
+        return new TestUserMode[][]{
+                new TestUserMode[]{TestUserMode.SUPER_TENANT_ADMIN},
+                new TestUserMode[]{TestUserMode.TENANT_ADMIN}
+        };
     }
 }

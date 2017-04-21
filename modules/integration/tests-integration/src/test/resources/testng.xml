@@ -43,20 +43,15 @@
             <class name="org.wso2.iot.integration.device.operation.AndroidOperation"/>
         </classes>
     </test>
+    <test name="android-configuration" preserve-order="true" parallel="false">
+        <classes>
+            <class name="org.wso2.iot.integration.device.configuration.AndroidConfigurationManagement"/>
+        </classes>
+    </test>
     <!--<test name="windows-enrollment" preserve-order="true" parallel="false">-->
-        <!--<classes>-->
-            <!--<class name="org.wso2.iot.integration.device.enrollment.WindowsEnrollment"/>-->
-        <!--</classes>-->
-    <!--</test>-->
-    <!--<test name="android-device-mgt" preserve-order="false" parallel="true">-->
-        <!--<classes>-->
-            <!--<class name="org.wso2.iot.integration.device.mgt.AndroidDeviceManagement"/>-->
-        <!--</classes>-->
-    <!--</test>-->
-    <!--<test name="android-configuration" preserve-order="true" parallel="false">-->
-        <!--<classes>-->
-            <!--<class name="org.wso2.iot.integration.device.configuration.AndroidConfigurationManagement"/>-->
-        <!--</classes>-->
+    <!--<classes>-->
+    <!--<class name="org.wso2.iot.integration.device.enrollment.WindowsEnrollment"/>-->
+    <!--</classes>-->
     <!--</test>-->
     <!--<test name="android-policy" preserve-order="true" parallel="false">-->
         <!--<classes>-->
@@ -73,16 +68,11 @@
             <!--<class name="org.wso2.iot.integration.mobileDevice.MobileDeviceManagement"/>-->
         <!--</classes>-->
     <!--</test>-->
-    <!--<test name="user-mgt" preserve-order="true" parallel="false">-->
-        <!--<classes>-->
-            <!--<class name="org.wso2.iot.integration.user.UserManagement"/>-->
-        <!--</classes>-->
-    <!--</test>-->
-    <!--<test name="role-mgt" preserve-order="true" parallel="false">-->
-        <!--<classes>-->
-            <!--<class name="org.wso2.iot.integration.role.RoleManagement"/>-->
-        <!--</classes>-->
-    <!--</test>-->
+    <test name="role-mgt" preserve-order="true" parallel="false">
+        <classes>
+            <class name="org.wso2.iot.integration.role.RoleManagement"/>
+        </classes>
+    </test>
     <!--<test name="policy-mgt" preserve-order="true" parallel="false">-->
         <!--<classes>-->
             <!--<class name="org.wso2.iot.integration.policy.PolicyManagement"/>-->
@@ -108,4 +98,9 @@
             <!--<class name="org.wso2.iot.integration.notification.NotificationManagement"/>-->
         <!--</classes>-->
     <!--</test>-->
+    <test name="user-mgt" preserve-order="true" parallel="false">
+        <classes>
+            <class name="org.wso2.iot.integration.user.UserManagement"/>
+        </classes>
+    </test>
 </suite>
