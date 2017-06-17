@@ -33,7 +33,8 @@ import java.net.URL;
  */
 public class AndroidDeviceManagementAPIJmeterTestCase {
     private static Log log = LogFactory.getLog(AndroidDeviceManagementAPIJmeterTestCase.class);
-    @Test()
+
+    @Test(description = "Testing the response when sending different input parameters with different values")
     public void permutationTest() throws AutomationFrameworkException {
         URL url = Thread.currentThread().getContextClassLoader().getResource(
                 "jmeter-scripts" + File.separator + "AndroidDeviceManagementAPIAdditionalPermutations.jmx");
@@ -43,7 +44,7 @@ public class AndroidDeviceManagementAPIJmeterTestCase {
         manager.runTest(script);
     }
 
-    @Test(dependsOnMethods = {"permutationTest"})
+    @Test(description = "Testing the basic android device management API calls", dependsOnMethods = {"permutationTest"})
     public void listServices() throws AutomationFrameworkException {
         URL url = Thread.currentThread().getContextClassLoader()
                 .getResource("jmeter-scripts" + File.separator + "NewAndroidDeviceManagementAPI.jmx");

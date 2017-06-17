@@ -181,7 +181,7 @@ elif [ "$CMD" = "start" ]; then
   fi
   export CARBON_HOME=$CARBON_HOME
 # using nohup sh to avoid erros in solaris OS.TODO
-  nohup sh $CARBON_HOME/bin/wso2server.sh $args > /dev/null 2>&1 &
+  nohup sh $CARBON_HOME/bin/iot-server.sh $args > /dev/null 2>&1 &
   exit 0
 elif [ "$CMD" = "stop" ]; then
   export CARBON_HOME=$CARBON_HOME
@@ -200,7 +200,7 @@ elif [ "$CMD" = "restart" ]; then
   done
 
 # using nohup sh to avoid erros in solaris OS.TODO
-  nohup sh $CARBON_HOME/bin/wso2server.sh $args > /dev/null 2>&1 &
+  nohup sh $CARBON_HOME/bin/iot-server.sh $args > /dev/null 2>&1 &
   exit 0
 elif [ "$CMD" = "test" ]; then
     JAVACMD="exec "$JAVACMD""
@@ -326,6 +326,8 @@ do
     -Diot.gateway.host="localhost" \
     -Diot.gateway.https.port="8243" \
     -Diot.gateway.http.port="8280" \
+    -Diot.gateway.carbon.https.port="9443" \
+    -Diot.gateway.carbon.http.port="9763" \
     -Diot.apimpublisher.host="localhost" \
     -Diot.apimpublisher.https.port="9443" \
     -Diot.apimstore.host="localhost" \

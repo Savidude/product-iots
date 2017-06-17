@@ -1485,7 +1485,7 @@
         <!-- Carbon Identity -->
         <carbon.identity.framework.version>5.7.5</carbon.identity.framework.version>
         <carbon.identity.framework.version.range>[5.2.0, 6.0.0)</carbon.identity.framework.version.range>
-        <identity.local.auth.basicauth.version>5.2.4</identity.local.auth.basicauth.version>
+        <identity.local.auth.basicauth.version>5.3.1</identity.local.auth.basicauth.version>
         <identity.inbound.auth.openid.version>5.1.1</identity.inbound.auth.openid.version>
         <identity.inbound.auth.saml.version>5.3.1</identity.inbound.auth.saml.version>
         <identity.carbon.auth.saml2.version>5.2.1</identity.carbon.auth.saml2.version>
@@ -1507,21 +1507,20 @@
 
         <!-- Carbon Registry -->
         <carbon.registry.version>4.6.5</carbon.registry.version>
-        <carbon.registry.version.iotcore>4.6.5</carbon.registry.version.iotcore>
         <!-- Carbon Governance -->
         <carbon.governance.version>4.7.0</carbon.governance.version>
 
         <!-- Carbon Device Management -->
 
-        <carbon.device.mgt.version>2.0.54</carbon.device.mgt.version>
-        <carbon.device.mgt.version.range>[2.0.0, 3.0.0)</carbon.device.mgt.version.range>
+        <carbon.device.mgt.version>3.0.1</carbon.device.mgt.version>
+        <carbon.device.mgt.version.range>[3.0.0, 4.0.0)</carbon.device.mgt.version.range>
 
         <!-- IOT Device Management -->
         <product.iot.version>3.1.0-SNAPSHOT</product.iot.version>
 
         <!-- Carbon Device Management Plugins-->
 
-        <carbon.device.mgt.plugin.version>3.0.30</carbon.device.mgt.plugin.version>
+        <carbon.device.mgt.plugin.version>4.0.1</carbon.device.mgt.plugin.version>
 
         <!-- API Management -->
         <carbon.api.mgt.version>6.1.80</carbon.api.mgt.version>
@@ -1628,10 +1627,10 @@
         <caramel.version>1.0.1</caramel.version>
 
         <!-- App manager version-->
-        <appmgt.feature.version>1.2.19</appmgt.feature.version>
+        <appmgt.feature.version>1.2.25</appmgt.feature.version>
 
         <!-- Carbon Store version-->
-        <carbon.store.version>1.4.4</carbon.store.version>
+        <carbon.store.version>1.4.8</carbon.store.version>
 
         <!-- Carbon Remote User Management version -->
         <carbon.um.ws.version>5.1.4</carbon.um.ws.version>
