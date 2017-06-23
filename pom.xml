@@ -1440,7 +1440,7 @@
     <properties>
 
         <!--Carbon kernel versions-->
-        <carbon.kernel.version>4.4.14</carbon.kernel.version>
+        <carbon.kernel.version>4.4.16</carbon.kernel.version>
         <carbon.kernel.version.range>[4.4.0, 4.5.0)</carbon.kernel.version.range>
         <carbon.ui.menu.stratos.version>2.2.0</carbon.ui.menu.stratos.version>
 
@@ -1511,19 +1511,17 @@
         <carbon.governance.version>4.7.0</carbon.governance.version>
 
         <!-- Carbon Device Management -->
-
-        <carbon.device.mgt.version>3.0.7</carbon.device.mgt.version>
+        <carbon.device.mgt.version>3.0.8</carbon.device.mgt.version>
         <carbon.device.mgt.version.range>[3.0.0, 4.0.0)</carbon.device.mgt.version.range>
 
         <!-- IOT Device Management -->
         <product.iot.version>3.1.0-SNAPSHOT</product.iot.version>
 
         <!-- Carbon Device Management Plugins-->
-
-        <carbon.device.mgt.plugin.version>4.0.4</carbon.device.mgt.plugin.version>
+	<carbon.device.mgt.plugin.version>4.0.6</carbon.device.mgt.plugin.version>
 
         <!-- API Management -->
-        <carbon.api.mgt.version>6.1.80</carbon.api.mgt.version>
+        <carbon.api.mgt.version>6.1.94</carbon.api.mgt.version>
         <carbon.api.mgt.version.range>(6.0.0,7.0.0]</carbon.api.mgt.version.range>
 
         <!-- Carbon Mediation -->
@@ -1551,8 +1549,8 @@
 
         <!-- IoT Broker Dependencies -->
         <product.iot.broker.version>${product.iot.version}</product.iot.broker.version>
-        <andes.version>3.1.15</andes.version>
-        <carbon.messaging.version>3.1.17</carbon.messaging.version>
+        <andes.version>3.2.19</andes.version>
+        <carbon.messaging.version>3.2.15</carbon.messaging.version>
 
         <!-- Third Party Dependencies-->
         <spongycastle.version>1.51.0.0</spongycastle.version>
@@ -1625,10 +1623,10 @@
         <caramel.version>1.0.1</caramel.version>
 
         <!-- App manager version-->
-        <appmgt.feature.version>1.2.27</appmgt.feature.version>
+        <appmgt.feature.version>1.2.29</appmgt.feature.version>
 
         <!-- Carbon Store version-->
-        <carbon.store.version>1.4.8</carbon.store.version>
+        <carbon.store.version>1.5.1</carbon.store.version>
 
         <!-- Carbon Remote User Management version -->
         <carbon.um.ws.version>5.1.4</carbon.um.ws.version>
